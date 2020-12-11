@@ -12,9 +12,17 @@ const reducer = ( state = initialState, action ) => {
                 ...state,
                 todos: state.todos.filter(todo => todo.id !== action.payload)
             };
+        case 'UPDATE_TODO':
+            const { id, newLabel } = action.payload;
+            const newTodo = { id : id, label: newLabel };
+            const others = state.todos.filter(todo => todo.id !== id);
+            return {
+                ...state,
+                todos: [...others, newTodo]
+            };
         default:
             return state;
-    }
+    };
 };
 
 export default reducer;

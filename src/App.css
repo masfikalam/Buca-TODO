@@ -6,10 +6,10 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 10px 10px 1px rgb(231, 230, 230);
+  border-bottom: 5px solid #5dc796;
 }
 nav span {
-  color: #68d5a3;
+  color: #5dc796;
   margin: 0 15px;
   font-size: 40px;
   font-weight: bold;
@@ -32,7 +32,8 @@ main {
   padding: 10px 15px;
 }
 #todoForm button {
-  background-color: #68d5a3;
+  cursor: pointer;
+  background-color: #5dc796;
   color: white;
 }
 #alltodos {
@@ -58,11 +59,32 @@ main {
   margin: 5px auto;
   font-size: 22px;
 }
-#alltodos li .cross:hover {
+#alltodos li .box span {
+  margin: 0 5px;
   cursor: pointer;
-  color: black;
   font-weight: bold;
 }
+#alltodos li .box span:hover {
+  color: black;
+}
+#alltodos .editBox {
+  margin-right: 10px;
+  width: 100%;
+  min-width: 150px;  
+  margin-bottom: 5px;
+  padding: 5px 8px;
+  border-radius: 7px;
+  font-size: 18px;
+  border: none;
+}
+#alltodos .editForm {
+  margin-top: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* small device */
 @media (max-width: 800px) {
   nav span {
     font-size: 30px;
@@ -78,5 +100,12 @@ main {
   }
   #alltodos {
     width: 70%;
+  }
+  #alltodos .editForm {
+    flex-direction: column;
+  }
+  #alltodos .editBox {
+    margin-right: 0;
+    width: 90%;
   }
 }

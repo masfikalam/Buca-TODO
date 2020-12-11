@@ -21,7 +21,7 @@ const Input = () => {
 
     return (
         <form onSubmit={addTODO} id="todoForm">
-            <input type="text" name="todo" required/>
+            <input type="text" name="todo" required autoFocus/>
             <button type="submit">Add TODO</button>
         </form>
     );

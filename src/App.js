@@ -5,6 +5,8 @@ import Input from './Input';
 import AllTODO from './AllTODO';
 
 function App() {
+  document.body.style.userSelect = 'none';
+
   return (
     <>
       <nav>
